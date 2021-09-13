@@ -1,12 +1,11 @@
 import { useEffect } from "react";
+import { api } from "../../services/api";
 import { Container } from "./style";
 
-export function TransactionsTable () {
-
-    useEffect (() => {
-        fetch('http://localhost:3000/api/transactions')
-        .then(response => response.json())
-        .then(data => console.log(data))
+export function TransactionsTable() {
+    useEffect(() => {
+        api.get('/transactions')
+            .then(response => console.log(response.data))
     },[]);
 
 
@@ -25,13 +24,13 @@ export function TransactionsTable () {
                 <tbody>
                     <tr>
                         <td>Desenvolvimento Website</td>
-                        <td className= "Deposit">- R$12.000</td>
+                        <td className="Deposit">- R$12.000</td>
                         <td>Desenvolvimento</td>
                         <td>20/02/2021</td>
                     </tr>
                     <tr>
                         <td>Aluguel</td>
-                        <td className= "withdraw">- R$1.100</td>
+                        <td className="withdraw">- R$1.100</td>
                         <td>Casa</td>
                         <td>17/02/2021</td>
                     </tr>
