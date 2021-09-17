@@ -23,7 +23,7 @@ createServer({
         {
           id: 2,
           title: 'Aluguel',
-          type: 'withdrawn',
+          type: 'withdraw',
           category: 'Casa',
           amount: 4000,
           creatAt: new Date ('2021-02-14 11:00:00'),
