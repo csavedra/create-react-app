@@ -31,5 +31,6 @@ export const Container = styled.div `
         background: var(--green);
         color: #FFF;
     };
+
   };    
 `;
